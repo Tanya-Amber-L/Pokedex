@@ -3,6 +3,9 @@
 ## Description
 The client has always been a big fan of the original 151 Pokémon, and would like to have an app that can serve as their Pokédex. They’d like to browse through the Pokemon, search, manage their favourites, and more.
 
+## Screenshot of the project
+![Home Page - Phone view](./Pokedex%20Home.jpg)
+
 ## Functionnalities
 A basic list of functionality the app should have:
 - Trainers can see a list of Pokémon with some general information, such as name, number, picture and types.
