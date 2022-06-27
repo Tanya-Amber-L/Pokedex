@@ -14,11 +14,14 @@ onMounted(() => {
     store.fetchAllPokemons()
 })
 
+console.log(pokemons)
+
 </script>
 
 <template>
     <main>
         <HomeHeader />
+        <a href="/detail/1">test</a>
         <PokemonList :pokemons="pokemons" />
     </main>
 </template>
