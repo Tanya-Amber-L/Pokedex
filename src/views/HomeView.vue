@@ -1,9 +1,13 @@
 <script setup>
-import HelloWorld from '../components/HelloWorld.vue';
+import HomeHeader from '../components/HomeHeader.vue';
+import PokemonCard from '../components/PokemonCard.vue';
+
+
 </script>
 
 <template>
   <main>
-    <HelloWorld />
+    <HomeHeader />
+    <PokemonCard name="test" />
   </main>
 </template>
