@@ -18,11 +18,12 @@ export const usePokeStore = defineStore("main", {
 	actions: {
 		async fetchAllPokemons() {
 			try {
+				this.isLoading = true;
 				const res = await axios.get(
 					"https://stoplight.io/mocks/appwise-be/pokemon/57519009/pokemon"
 				);
 				this.pokemons = res.data;
-				// console.log(this.pokemons);
+				this.isLoading = false;
 			} catch (error) {
 				alert(error);
 				console.log(error);
