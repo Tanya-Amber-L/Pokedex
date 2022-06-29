@@ -4,7 +4,7 @@ import SearchBar from './SearchBar.vue';
 </script>
 
 <template>
-    <header>
+    <header class="px-6 pt-8">
         <Title />
         <SearchBar />
     </header>

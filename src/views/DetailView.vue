@@ -24,7 +24,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <main v-if="!isLoading" class="text-white p-4" :class="getAccordingBackground(singlePokemon.types[0].type.name)">
+    <main v-if="!isLoading" class="text-white p-4 min-h-screen" :class="getAccordingBackground(singlePokemon.types[0].type.name)">
         <DetailHeader />
         <p v-if="isLoading" class="text-3xl">Loadinggggg</p>
 
