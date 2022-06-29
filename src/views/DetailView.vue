@@ -1,14 +1,14 @@
 <script setup>
-// import About from '../components/About.vue';
 import { useRoute } from 'vue-router'
-import { ref, onMounted, computed, watch} from 'vue';
+import { onMounted} from 'vue';
 import { usePokeStore } from '../store/store.js';
+import { storeToRefs } from 'pinia';
 import { getAccordingBackground } from '../components/functions/getTypeBG.js';
 import { Capitalize } from '../components/functions/capitalize.js';
 import PokeImage from '../components/PokeImage.vue';
 import PokeDetail from '../components/PokeDetail.vue';
 import DetailHeader from '../components/DetailHeader.vue';
-import { storeToRefs } from 'pinia';
+import PokeStats from '../components/PokeStats.vue';
 
 const route = useRoute()
 const pokemonId = route.params.id;
@@ -30,6 +30,7 @@ onMounted(() => {
 
         <h1 v-if="!isLoading" class="text-4xl font-semibold">{{Capitalize(singlePokemon.name)}}</h1>
         <PokeImage v-if="!isLoading" :image="singlePokemon.sprites.other['official-artwork'].front_default"/>
-        <PokeDetail :id="singlePokemon.id" :height="singlePokemon.height" :weight="singlePokemon.weight" :types="singlePokemon.types" />
+        <PokeDetail v-if="!isLoading" :id="singlePokemon.id" :height="singlePokemon.height" :weight="singlePokemon.weight" :types="singlePokemon.types" />
+        <PokeStats :stats="singlePokemon.stats" />
     </main>
 </template>
