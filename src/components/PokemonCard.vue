@@ -9,7 +9,6 @@
         types: Array
     })
 
-    // let name = props.name.charAt(0).toUpperCase() + props.name.slice(1);
     let id = String(props.id).padStart(3, "0"); 
 
 </script>

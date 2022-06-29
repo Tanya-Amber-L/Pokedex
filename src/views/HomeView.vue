@@ -21,7 +21,6 @@ console.log(pokemons)
 <template>
     <main>
         <HomeHeader />
-        <a href="/detail/1">test</a>
         <PokemonList :pokemons="pokemons" />
     </main>
 </template>

@@ -5,6 +5,7 @@ export const usePokeStore = defineStore("main", {
 	state: () => ({
 		pokemons: [],
 		singlePokemon: [],
+		isLoading: true,
 	}),
 	getters: {
 		getPokemons(state) {
@@ -29,11 +30,12 @@ export const usePokeStore = defineStore("main", {
 		},
 		async fetchSinglePokemon(id) {
 			try {
+				this.isLoading = true;
 				const res = await axios.get(
 					`https://pokeapi.co/api/v2/pokemon/${id}`
 				);
 				this.singlePokemon = res.data;
-				console.log(this.singlePokemon);
+				this.isLoading = false;
 			} catch (error) {
 				alert(error);
 				console.log(error);
