@@ -36,49 +36,49 @@
                     <div class="bg-gray-600 h-1.5 rounded-full dark:bg-gray-300" :style="'width:' + stat.base_stat/255*100 + '%'"></div>
                 </div>
             </div> -->
-            <div class="flex items-center">
+            <div class="flex items-center py-0.5">
                 <span class="text-gray-400 min-w-[65px] text-sm">HP</span> 
                 {{hp}}
                 <div class="w-full rounded-full h-1 dark:bg-gray-200 ml-5">
                     <div :class="statColor(hp)" class="h-1 rounded-full" :style="'width:' + hp/255*100 + '%'"></div>
                 </div>
             </div>
-            <div class="flex items-center">
+            <div class="flex items-center py-0.5">
                 <span class="text-gray-400 min-w-[65px] text-sm">Attack</span> 
                 {{attack}}
                 <div class="w-full rounded-full h-1 dark:bg-gray-200 ml-5">
                     <div :class="statColor(attack)" class="h-1 rounded-full" :style="'width:' + attack/255*100 + '%'"></div>
                 </div>
             </div>
-            <div class="flex items-center">
+            <div class="flex items-center py-0.5">
                 <span class="text-gray-400 min-w-[65px] text-sm">Defense</span> 
                 {{defense}}
                 <div class="w-full rounded-full h-1 dark:bg-gray-200 ml-5">
                     <div :class="statColor(defense)" class="h-1 rounded-full" :style="'width:' + defense/255*100 + '%'"></div>
                 </div>
             </div>
-            <div class="flex items-center">
+            <div class="flex items-center py-0.5">
                 <span class="text-gray-400 min-w-[65px] text-sm">Sp. Atk</span> 
                 {{spAttack}}
                 <div class="w-full rounded-full h-1 dark:bg-gray-200 ml-5">
                     <div :class="statColor(spAttack)" class="h-1 rounded-full" :style="'width:' + spAttack/255*100 + '%'"></div>
                 </div>
             </div>
-            <div class="flex items-center">
+            <div class="flex items-center py-0.5">
                 <span class="text-gray-400 min-w-[65px] text-sm">Sp. Def</span> 
                 {{spDefense}}
                 <div class="w-full rounded-full h-1 dark:bg-gray-200 ml-5">
                     <div :class="statColor(spDefense)" class="h-1 rounded-full" :style="'width:' + spDefense/255*100 + '%'"></div>
                 </div>
             </div>
-            <div class="flex items-center">
+            <div class="flex items-center py-0.5">
                 <span class="text-gray-400 min-w-[65px] text-sm">Speed</span> 
                 {{speed}}
                 <div class="w-full rounded-full h-1 dark:bg-gray-200 ml-5">
                     <div :class="statColor(speed)" class="h-1 rounded-full" :style="'width:' + speed/255*100 + '%'"></div>
                 </div>
             </div>
-            <div class="flex items-center">
+            <div class="flex items-center py-0.5">
                 <span class="text-gray-400 min-w-[65px] text-sm">Total</span> 
                 {{hp + attack + defense + spAttack + spDefense + speed}}
             </div>
