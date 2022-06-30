@@ -1,16 +1,25 @@
 <script setup>
     import { getAccordingBackground } from './functions/getTypeBG.js';
+    import { Capitalize } from './functions/capitalize.js';
 
     const props = defineProps({
         id: Number,
         height: Number,
         weight: Number,
-        types: Array
+        types: Array,
+        abilities: Array
     })
     
     let id = String(props.id).padStart(3, "0"); 
     let height = props.height / 10 + "m";
     let weight = props.weight / 10 + " kg"
+    let abilities = () => {
+        let array = []
+        props.abilities.forEach(ability => {
+            array.push(Capitalize(ability.ability.name))
+        })
+        return array.join(", ")
+    }
 </script>
 
 <template>
@@ -28,6 +37,7 @@
             <p class="flex items-center py-1"><span class="text-gray-400 w-1/2 text-sm">Nummer</span> {{id}}</p>
             <p class="flex items-center py-1"><span class="text-gray-400 w-1/2 text-sm">Hoogte</span> {{height}}</p>
             <p class="flex items-center py-1"><span class="text-gray-400 w-1/2 text-sm">Gewicht</span> {{weight}}</p>
+            <p class="flex items-center py-1"><span class="text-gray-400 w-1/2 text-sm">Vaardigheden</span>{{abilities()}}</p>
         </div>
 
     </section>
