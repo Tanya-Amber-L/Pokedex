@@ -5,6 +5,7 @@ import { usePokeStore } from '../store/store.js';
 import PokemonList from '../components/PokemonList.vue';
 import { storeToRefs } from 'pinia';
 import Loader from '../components/Loader.vue';
+import Trainer from '../components/Trainer.vue';
 
 const store = usePokeStore();
 
@@ -25,6 +26,7 @@ console.log(pokemons)
 <template>
     <main>
         <HomeHeader/>
+        <Trainer />
         <Loader v-if="isLoading"/>
         <PokemonList v-if="!isLoading" :pokemons="pokemons" />
     </main>
