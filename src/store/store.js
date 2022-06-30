@@ -51,5 +51,13 @@ export const usePokeStore = defineStore("main", {
 			this.favorites.push(pokemon);
 			console.log(this.favorites);
 		},
+		removeFromFavorites(pokemonId) {
+			this.favorites.forEach((pokemon, i) => {
+				if (pokemonId === pokemon.id) {
+					this.favorites.splice(i, 1);
+				}
+				console.log("removed:", pokemon);
+			});
+		},
 	},
 });
