@@ -7,7 +7,7 @@ import AddToFavoritesBtn from './AddToFavoritesBtn.vue';
 </script>
 
 <template>
-    <header>
+    <header class="flex justify-between">
         <BackHomeBtn />
         <AddToFavoritesBtn :pokemon="props.pokemon" />
     </header>
