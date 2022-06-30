@@ -27,7 +27,7 @@ onMounted(() => {
 <template>
     <Loader v-if="isLoading" />
     <main v-if="!isLoading" class="text-white p-4 min-h-screen" :class="getAccordingBackground(singlePokemon.types[0].type.name)">
-        <DetailHeader />
+        <DetailHeader :pokemon="singlePokemon" />
 
         <h1 v-if="!isLoading" class="text-4xl font-semibold">{{Capitalize(singlePokemon.name)}}</h1>
         <PokeImage v-if="!isLoading" :image="singlePokemon.sprites.other['official-artwork'].front_default"/>

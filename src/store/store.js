@@ -1,10 +1,12 @@
 import { defineStore } from "pinia";
+import { useStorage } from "@vueuse/core";
 import axios from "axios";
 
 export const usePokeStore = defineStore("main", {
 	state: () => ({
 		pokemons: [],
 		singlePokemon: [],
+		favorites: useStorage("Favorites", []),
 		isLoading: true,
 	}),
 	getters: {
@@ -13,6 +15,9 @@ export const usePokeStore = defineStore("main", {
 		},
 		getSinglePokemon(state) {
 			return state.singlePokemon;
+		},
+		getFavorites(state) {
+			return state.favorites;
 		},
 	},
 	actions: {
@@ -41,6 +46,10 @@ export const usePokeStore = defineStore("main", {
 				alert(error);
 				console.log(error);
 			}
+		},
+		addToFavorites(pokemon) {
+			this.favorites.push(pokemon);
+			console.log(this.favorites);
 		},
 	},
 });
