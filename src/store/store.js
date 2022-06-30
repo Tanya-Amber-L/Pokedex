@@ -8,6 +8,7 @@ export const usePokeStore = defineStore("main", {
 		singlePokemon: [],
 		favorites: useStorage("Favorites", []),
 		isLoading: true,
+		filteredPokemons: [],
 	}),
 	getters: {
 		getPokemons(state) {
@@ -58,6 +59,14 @@ export const usePokeStore = defineStore("main", {
 				}
 				console.log("removed:", pokemon);
 			});
+		},
+		filterPokemons(search) {
+			// this.pokemons.filter((pokemon) => {
+			// 	if (pokemon.name.toLowerCase().includes(search.toLowerCase())) {
+			// 		console.log("yes");
+			// 	}
+			// });
+			console.log(search);
 		},
 	},
 });

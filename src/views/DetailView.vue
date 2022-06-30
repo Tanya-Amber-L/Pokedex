@@ -1,6 +1,6 @@
 <script setup>
 import { useRoute } from 'vue-router'
-import { onMounted} from 'vue';
+import { onBeforeMount, onMounted} from 'vue';
 import { usePokeStore } from '../store/store.js';
 import { storeToRefs } from 'pinia';
 import { getAccordingBackground } from '../components/functions/getTypeBG.js';
@@ -19,15 +19,19 @@ const store = usePokeStore();
 const {singlePokemon, isLoading} = storeToRefs(store);
 // taking the direct states from the store
 
+onBeforeMount(() =>{
+    store.isLoading = true;
+})
 onMounted(() => {
     store.fetchSinglePokemon(pokemonId)
 })
+
 </script>
 
 <template>
     <Loader v-if="isLoading" />
-    <main v-if="!isLoading" class="text-white p-4 min-h-screen" :class="getAccordingBackground(singlePokemon.types[0].type.name)">
-        <DetailHeader :pokemon="singlePokemon" />
+    <main v-if="!isLoading" class="text-white p-4 min-h-screen" :class="!isLoading? getAccordingBackground(singlePokemon.types[0].type.name) : null">
+        <DetailHeader v-if="!isLoading" :pokemon="singlePokemon" />
 
         <h1 v-if="!isLoading" class="text-4xl font-semibold">{{Capitalize(singlePokemon.name)}}</h1>
         <PokeImage v-if="!isLoading" :image="singlePokemon.sprites.other['official-artwork'].front_default"/>
