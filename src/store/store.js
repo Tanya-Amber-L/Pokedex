@@ -48,6 +48,18 @@ export const usePokeStore = defineStore("main", {
 				console.log(error);
 			}
 		},
+		sortByIncrementName() {
+			this.pokemons = this.pokemons.sort((a, b) => a.name > b.name);
+		},
+		sortByDecrementName() {
+			this.pokemons = this.pokemons.sort((a, b) => a.name < b.name);
+		},
+		sortByIncrementId() {
+			this.pokemons = this.pokemons.sort((a, b) => a.id > b.id);
+		},
+		sortByDecrementId() {
+			this.pokemons = this.pokemons.sort((a, b) => a.id < b.id);
+		},
 		addToFavorites(pokemon) {
 			this.favorites.push(pokemon);
 			console.log(this.favorites);
@@ -59,14 +71,6 @@ export const usePokeStore = defineStore("main", {
 				}
 				console.log("removed:", pokemon);
 			});
-		},
-		filterPokemons(search) {
-			// this.pokemons.filter((pokemon) => {
-			// 	if (pokemon.name.toLowerCase().includes(search.toLowerCase())) {
-			// 		console.log("yes");
-			// 	}
-			// });
-			console.log(search);
 		},
 	},
 });

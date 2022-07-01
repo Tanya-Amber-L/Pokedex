@@ -20,7 +20,7 @@ A basic list of functionality the app should have:
   <summary>Nice to have</summary>
   
   - [ ] Besides their favourites, trainers would also like to manage their team of Pokémon. A trainer’s team is limited to 6 Pokémon.
-  - [ ] Quite a few trainers have small devices. The list header (title + search) is quite large, it should collapse when scrolling.
+  - [x] Quite a few trainers have small devices. The list header (title + search) is quite large, it should collapse when scrolling.
   - [ ] Trainers would like to see more than one picture for Pokémon if available on the detail screen (think carousel like UI).
   - [ ] Trainers would like to see the evolutions of a Pokémon if available, from the detail screen.
   - [ ] Trainers are always on the road in search of new Pokémon so they don’t always have the best connection. The customer would like to have loading and error indicators when data can not be found or it takes long too long. 
