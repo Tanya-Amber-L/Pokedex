@@ -50,15 +50,27 @@ export const usePokeStore = defineStore("main", {
 		},
 		sortByIncrementName() {
 			this.pokemons = this.pokemons.sort((a, b) => a.name > b.name);
+			this.filteredPokemons = this.filteredPokemons.sort(
+				(a, b) => a.name > b.name
+			);
 		},
 		sortByDecrementName() {
 			this.pokemons = this.pokemons.sort((a, b) => a.name < b.name);
+			this.filteredPokemons = this.filteredPokemons.sort(
+				(a, b) => a.name < b.name
+			);
 		},
 		sortByIncrementId() {
 			this.pokemons = this.pokemons.sort((a, b) => a.id > b.id);
+			this.filteredPokemons = this.filteredPokemons.sort(
+				(a, b) => a.id > b.id
+			);
 		},
 		sortByDecrementId() {
 			this.pokemons = this.pokemons.sort((a, b) => a.id < b.id);
+			this.filteredPokemons = this.filteredPokemons.sort(
+				(a, b) => a.id < b.id
+			);
 		},
 		addToFavorites(pokemon) {
 			this.favorites.push(pokemon);

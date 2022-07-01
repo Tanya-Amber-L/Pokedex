@@ -27,7 +27,7 @@
 
 <template>
     <section class="">
-        <h2 class="font-bold text-sm mb-2">STATISTIEKEN</h2>
+        <h2 class="font-bold text-sm my-2">STATISTIEKEN</h2>
         <div class="bg-white shadow text-black py-4 px-5 rounded-lg">
             <!-- <div class="flex" v-for="stat in stats">
                 <span>{{stat.stat.name}}</span>
