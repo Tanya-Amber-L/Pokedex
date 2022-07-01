@@ -9,10 +9,11 @@ import Trainer from '../components/Trainer.vue';
 
 const store = usePokeStore();
 
-const { pokemons, isLoading } = storeToRefs(store);
+const { pokemons, isLoading, filteredPokemons } = storeToRefs(store);
 
 onMounted(() => {
     store.fetchAllPokemons()
+    store.filteredPokemons = []
 })
 
 </script>
@@ -22,6 +23,6 @@ onMounted(() => {
         <HomeHeader/>
         <Trainer />
         <Loader v-if="isLoading"/>
-        <PokemonList v-if="!isLoading" :pokemons="pokemons" />
+        <PokemonList v-if="!isLoading" :pokemons="filteredPokemons.length == 0 ? pokemons : filteredPokemons" />
     </main>
 </template>
