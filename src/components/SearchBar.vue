@@ -9,14 +9,32 @@
     const search = ref("")
 
     const filter = (search) => {
-        console.log(search)
+        // console.log(search)
         store.filteredPokemons = []
-        store.pokemons.filter((pokemon) => {
-            if (pokemon.name.toLowerCase().includes(search.toLowerCase())) {
-                store.filteredPokemons.push(pokemon)
-                console.log(store.filteredPokemons)
-            }
-        })
+
+        if (search.match(/^[0-9]+$/)) {
+            store.pokemons.filter((pokemon) => {
+                if (pokemon.id === Number(search)) {
+                    store.filteredPokemons.push(pokemon)
+                    // console.log(store.filteredPokemons)
+                }
+            })
+        } else {
+            store.pokemons.filter((pokemon) => {
+                let types = () => {
+                    let array = []
+                    pokemon.types.forEach(type => {
+                        array.push(type.type.name)
+                    })
+                    return array.join(" ")
+                }
+                if (pokemon.name.toLowerCase().includes(search.toLowerCase()) || types().includes(search.toLowerCase())) {
+                    store.filteredPokemons.push(pokemon)
+                    console.log(types())
+                }
+            })
+        }
+
     }
 </script>
 <template>

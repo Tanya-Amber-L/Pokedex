@@ -19,7 +19,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <main>
+    <main class="min-h-screen">
         <HomeHeader/>
         <Trainer />
         <Loader v-if="isLoading"/>
