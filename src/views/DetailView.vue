@@ -35,7 +35,9 @@ onMounted(() => {
 
         <h1 v-if="!isLoading" class="text-4xl font-semibold">{{Capitalize(singlePokemon.name)}}</h1>
         <PokeImage v-if="!isLoading" :image="singlePokemon.sprites.other['official-artwork'].front_default"/>
-        <PokeDetail v-if="!isLoading" :id="singlePokemon.id" :height="singlePokemon.height" :weight="singlePokemon.weight" :types="singlePokemon.types" :abilities="singlePokemon.abilities" />
-        <PokeStats :stats="singlePokemon.stats" />
+        <div class="sm:flex justify-between">
+            <PokeDetail class="sm:w-[49%]" v-if="!isLoading" :id="singlePokemon.id" :height="singlePokemon.height" :weight="singlePokemon.weight" :types="singlePokemon.types" :abilities="singlePokemon.abilities" />
+            <PokeStats class="sm:w-[49%]" :stats="singlePokemon.stats" />
+        </div>
     </main>
 </template>

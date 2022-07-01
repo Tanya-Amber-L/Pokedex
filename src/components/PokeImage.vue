@@ -8,7 +8,7 @@
 </script>
 
 <template>
-    <div class="w-3/4 m-auto">
+    <div class="w-3/4 m-auto max-w-sm">
         <inner-image-zoom 
         :src="props.image"
         :zoomSrc="props.image"
