@@ -44,7 +44,7 @@ A basic list of functionality the app should have:
   
   - [x] Configure a linter to keep your code clean and consistent
   - [x] Use of utility based css frameworks (TailWind)
-  - [ ] Create a ‘404’ page for navigating to URL’s that don’t exist or are invalid
+  - [x] Create a ‘404’ page for navigating to URL’s that don’t exist or are invalid
   - [ ] Use event debouncing/throttling when applicable
   - [x] Make sure there is an indicator when loading new data, and make sure no old data is visible when changing selected Pokémon
 
