@@ -25,8 +25,8 @@ import { usePokeStore } from '../store/store';
 </script>
 <template>
     <div @click="toggle(); addToFavorite? store.addToFavorites(props.pokemon) : store.removeFromFavorites(props.pokemon.id)">
-        <img v-if="!addToFavorite" class="w-7 h-7 transition-all" src="../assets/heart.png" alt="cc">
-        <img v-if="addToFavorite" class="w-7 h-7 transition-all" src="../assets/red-heart.png" alt="cc">
+        <img v-if="!addToFavorite" class="w-7 h-7 transition-all" src="../assets/heart.png" alt="♡">
+        <img v-if="addToFavorite" class="w-7 h-7 transition-all" src="../assets/red-heart.png" alt="❤️">
     </div>
 </template>
 
