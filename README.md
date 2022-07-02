@@ -1,9 +1,20 @@
 # Pokedex
 
+#### Table of Contents
+
+-   [Project UI](#ui)
+-   [Functionnalities](#functionnalities)
+-   [Tech Requirements](#tech-requirements)
+-   [Resources](#resources)
+-   [Deploy](#deploy)
+    -   [Clone](#clone-the-project)
+
+---
+
 ## Description
 The client has always been a big fan of the original 151 Pokémon, and would like to have an app that can serve as their Pokédex. They’d like to browse through the Pokemon, search, manage their favourites, and more.
 
-## Screenshot of the project
+## UI
 ![Home Page - Phone view](./Pokedex%20Home.jpg)
 
 ## Functionnalities
@@ -49,3 +60,28 @@ A basic list of functionality the app should have:
   - [x] Make sure there is an indicator when loading new data, and make sure no old data is visible when changing selected Pokémon
 
   </details>
+
+## Resources
+  - [Vue JS](https://vuejs.org/)
+  - [Pinia](https://pinia.vuejs.org/)
+  - [Tailwind](https://tailwindcss.com/)
+  - [Flaticon](https://www.flaticon.com)
+
+## Deploy
+ On [Netlify](https://www.netlify.com/) at the adress [https://tanya-pokedex.netlify.app/](https://tanya-pokedex.netlify.app/)
+
+ 
+### Clone the project
+
+To clone and run this application, you'll need [Git](https://git-scm.com/downloads) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/Tanya-Amber-L/Pokedex.git
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm run dev
+```
