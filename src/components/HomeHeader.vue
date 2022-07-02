@@ -5,7 +5,7 @@ import Sort from './Sort.vue';
 </script>
 
 <template>
-    <header class="px-6 pt-8">
+    <header class="px-2 xs:px-6 pt-8">
         <Sort />
         <Title />
         <SearchBar />

@@ -24,6 +24,9 @@ module.exports = {
 				pokeDragon: "#4818d9",
 				pokeNormal: "#A3ACAE",
 			},
+			screens: {
+				xs: "375px",
+			},
 		},
 	},
 	plugins: [],
