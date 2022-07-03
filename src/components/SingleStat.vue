@@ -3,7 +3,7 @@ import { ref } from "vue";
 
 const prop = defineProps({
   name: String,
-  stat: String,
+  stat: Number,
   color: String,
 });
 console.log(prop);

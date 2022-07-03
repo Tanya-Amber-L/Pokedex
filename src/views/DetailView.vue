@@ -29,14 +29,18 @@ onMounted(() => {
 
 <template>
   <Loader v-if="isLoading" />
+
+  <DetailHeader
+    v-if="!isLoading"
+    :pokemon="singlePokemon"
+    :bg="getAccordingBackground(singlePokemon.types[0].type.name)"
+  />
   <main
     v-if="!isLoading"
-    class="text-white p-4 min-h-screen"
+    class="text-white p-4 min-h-screen pt-20"
     :class="getAccordingBackground(singlePokemon.types[0].type.name)"
   >
     <div class="max-w-4xl m-auto">
-      <DetailHeader v-if="!isLoading" :pokemon="singlePokemon" />
-
       <h1 v-if="!isLoading" class="text-4xl font-semibold">
         {{ Capitalize(singlePokemon.name) }}
       </h1>
