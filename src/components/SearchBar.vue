@@ -1,10 +1,10 @@
 <script setup>
-import { ref } from "vue";
 import { usePokeStore } from "../store/store";
+import { storeToRefs } from "pinia";
 
 const store = usePokeStore();
 
-const search = ref("");
+const { inputValue } = storeToRefs(store);
 
 const filter = (search) => {
   store.filteredPokemons = [];
@@ -42,8 +42,8 @@ const filter = (search) => {
 <template>
   <form @submit.prevent="onSubmit">
     <input
-      v-model="search"
-      @input="filter(search)"
+      v-model="inputValue"
+      @input="filter(inputValue)"
       class="w-full bg-gray-200 rounded-lg border border-slate-300 pr-3 pl-9 py-1 mt-4 focus:outline-none focus:border-blue-400 bg-[url('../assets/search.png')] bg-no-repeat bg-[bottom_5px_left_10px] bg-[length:20px_20px]"
       type="text"
       placeholder="Pokemon zoeken"

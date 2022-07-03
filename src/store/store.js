@@ -10,6 +10,7 @@ export const usePokeStore = defineStore("main", {
     isLoading: true,
     filteredPokemons: [],
     message: "",
+    inputValue: "",
   }),
   getters: {
     getPokemons(state) {
