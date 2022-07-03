@@ -18,7 +18,7 @@ let id = String(props.id).padStart(3, "0");
     <p class="font-bold">{{ Capitalize(props.name) }}</p>
     <p class="text-gray-400">Nr. {{ id }}</p>
   </div>
-  <div class="">
+  <div>
     <template v-for="type in props.types">
       <span
         class="rounded-full px-3 py-0.5 ml-[2px] text-xs text-gray-50"

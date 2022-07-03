@@ -12,7 +12,7 @@ const props = defineProps({
       :to="'/detail/' + pokemon.id"
       v-for="pokemon in pokemons"
       :key="pokemon.id"
-      class="bg-white rounded-lg mb-2 mx-1 p-2 flex justify-start items-top shadow-lg w-full sm:w-[49%]"
+      class="bg-white rounded-lg mb-2 p-2 flex justify-start items-top shadow-lg w-full sm:w-[49%]"
     >
       <PokemonCard
         :name="pokemon.name"
