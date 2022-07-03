@@ -21,7 +21,7 @@ let id = String(props.id).padStart(3, "0");
   <div class="">
     <template v-for="type in props.types">
       <span
-        class="rounded-full px-3 ml-[2px] text-xs text-gray-50"
+        class="rounded-full px-3 py-0.5 ml-[2px] text-xs text-gray-50"
         :class="getAccordingBackground(type.type.name)"
       >
         {{ type.type.name }}

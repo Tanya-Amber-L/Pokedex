@@ -30,7 +30,7 @@ let abilities = () => {
         <span class="text-gray-400 min-w-[110px] text-sm">Type</span>
         <template v-for="type in props.types">
           <span
-            class="rounded-full px-3 ml-[2px] text-xs text-gray-50"
+            class="rounded-full px-3 py-0.5 ml-[2px] text-xs text-gray-50"
             :class="getAccordingBackground(type.type.name)"
           >
             {{ type.type.name }}
