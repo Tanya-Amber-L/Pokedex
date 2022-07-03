@@ -54,4 +54,3 @@ const statColor = (stat) => {
     </div>
   </section>
 </template>
-<!-- width:{{stat.base_stat / 255 * 100}}% -->

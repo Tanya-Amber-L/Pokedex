@@ -1,10 +1,8 @@
 <script setup>
-import { storeToRefs } from "pinia";
 import { ref } from "vue";
 import { usePokeStore } from "../store/store";
 
 const store = usePokeStore();
-// const { sortByIncrementName } = storeToRefs(store);
 const modalOpen = ref(false);
 </script>
 

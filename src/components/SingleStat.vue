@@ -9,7 +9,6 @@ const prop = defineProps({
 console.log(prop);
 </script>
 <template>
-  <!-- flex justify-between items-center -->
   <div class="grid grid-cols-4 py-0.5 items-center">
     <span class="text-gray-400 text-sm">{{ prop.name }}</span>
     {{ prop.stat }}

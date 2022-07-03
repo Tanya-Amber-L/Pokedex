@@ -9,6 +9,7 @@ export const usePokeStore = defineStore("main", {
     favorites: useStorage("Favorites", []),
     isLoading: true,
     filteredPokemons: [],
+    message: "",
   }),
   getters: {
     getPokemons(state) {

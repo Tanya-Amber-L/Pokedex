@@ -17,7 +17,6 @@ const pokemonId = route.params.id;
 const store = usePokeStore();
 
 const { singlePokemon, isLoading } = storeToRefs(store);
-// taking the direct states from the store
 
 onBeforeMount(() => {
   store.isLoading = true;
