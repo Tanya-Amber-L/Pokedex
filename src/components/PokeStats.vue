@@ -27,7 +27,7 @@ const statColor = (stat) => {
 
 <template>
   <section class="">
-    <h2 class="font-bold text-sm mb-2">STATISTIEKEN</h2>
+    <h2 class="font-bold text-sm my-2 sm:mt-0">STATISTIEKEN</h2>
     <div class="bg-white shadow text-black py-4 px-5 rounded-lg">
       <SingleStat :name="'HP'" :stat="hp" :color="statColor(hp)" />
       <SingleStat :name="'Attack'" :stat="attack" :color="statColor(attack)" />
